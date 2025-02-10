@@ -1,0 +1,230 @@
+{
+  "title": "Sample Form Configuration File With All Possible Input Types",
+  "fields": [
+    {
+      "id": "name",
+      "type": "text",
+      "label": "Full Name (Text Input)",
+      "required": true,
+      "placeholder": "Pratiksha Sahu",
+      "validation": {
+        "minLength": 3,
+        "maxLength": 50,
+        "message": "Name must be between 3 and 50 characters."
+      }
+    },
+    {
+      "id": "email",
+      "type": "email",
+      "label": "Email Address (Email Input)",
+      "required": false,
+      "placeholder": "ps@email.com",
+      "helperText": "We will send a confirmation email to this address.",
+      "validation": {
+        "pattern": "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$",
+        "message": "Please enter a valid email address."
+      }
+    },
+    {
+      "id": "password",
+      "type": "password",
+      "label": "Password (Password Input)",
+      "required": false,
+      "placeholder": "dhJi93$aP8",
+      "helperText": "Your password must be at least 8 characters long.",
+      "validation": {
+        "minLength": 8,
+        "message": "Your password must be at least 8 characters long."
+      }
+    },
+    {
+      "id": "phone_number",
+      "type": "tel",
+      "label": "Phone Number (Telephone Number Input)",
+      "required": false,
+      "placeholder": "+91 9876654321",
+      "helperText": "Please enter a valid phone number with country code.",
+      "validation": {
+        "pattern": "^[0-9]{10,15}$",
+        "message": "Please enter a valid phone number with country code."
+      }
+    },
+    {
+      "id": "website",
+      "type": "url",
+      "label": "Website (URL Input)",
+      "required": false,
+      "placeholder": "https://example.com",
+      "helperText": "Enter your website URL."
+    },
+    {
+      "id": "age",
+      "type": "number",
+      "label": "Age (Number Input)",
+      "required": true,
+      "placeholder": "27",
+      "validation": {
+        "min": 0,
+        "max": 120,
+        "message": "Age must be between 0 and 120."
+      }
+    },
+    {
+      "id": "birthdate",
+      "type": "date",
+      "label": "Date of Birth (Date Input)",
+      "required": false
+    },
+    {
+      "id": "gender",
+      "type": "select",
+      "label": "Gender (Dropdown Select Input)",
+      "options": ["Male", "Female", "Other"],
+      "required": false,
+      "placeholder": "Select your gender"
+    },
+    {
+      "id": "employment_status",
+      "type": "radio",
+      "label": "Are you employed? (Radio Button Input with Conditional Rendering)",
+      "options": ["Yes", "No"],
+      "required": false
+    },
+    {
+      "id": "job_title",
+      "type": "text",
+      "label": "Job Title",
+      "required": false,
+      "placeholder": "Senior Software Engineer",
+      "dependsOn": {
+        "field": "employment_status",
+        "value": "Yes"
+      }
+    },
+    {
+      "id": "company_name",
+      "type": "text",
+      "label": "Company Name",
+      "required": false,
+      "placeholder": "Acme Inc.",
+      "dependsOn": {
+        "field": "employment_status",
+        "value": "Yes"
+      }
+    },
+    {
+      "id": "notifications",
+      "type": "checkbox",
+      "label": "Receive Email Notifications (Checkbox Input)",
+      "required": false,
+      "helperText": "Check this box to receive email updates."
+    },
+    {
+      "id": "comments",
+      "type": "textarea",
+      "label": "Additional Comments (Textarea Input)",
+      "required": false,
+      "placeholder": "Enter any additional comments"
+    },
+    {
+      "id": "profile_picture",
+      "type": "file",
+      "label": "Upload Profile Picture (File Upload Input)",
+      "required": false,
+      "helperText": "Accepted formats: JPG, PNG, GIF."
+    },
+    {
+      "id": "favorite_color",
+      "type": "color",
+      "label": "Favorite Color (Color Input)",
+      "required": false
+    },
+    {
+      "id": "rating",
+      "type": "range",
+      "label": "Rate your experience (Range Input)",
+      "required": false,
+      "validation": {
+        "min": 1,
+        "max": 10,
+        "message": "Rate from 1 to 10."
+      }
+    },
+    {
+      "id": "search_query",
+      "type": "search",
+      "label": "Search (Search Input)",
+      "required": false,
+      "placeholder": "Type to search...",
+      "helperText": "Enter keywords to search"
+    },
+    {
+      "id": "appointment_datetime",
+      "type": "datetime-local",
+      "label": "Appointment Date and Time (Datetime-Local Input)",
+      "required": false,
+      "helperText": "Select your preferred appointment date and time",
+      "validation": {
+        "message": "Please select a valid date and time"
+      }
+    },
+    {
+      "id": "subscription_month",
+      "type": "month",
+      "label": "Subscription Month (Month Input)",
+      "required": false,
+      "helperText": "Select the month for your subscription",
+      "validation": {
+        "message": "Please select a month"
+      }
+    },
+    {
+      "id": "course_week",
+      "type": "week",
+      "label": "Course Week (Week Input)",
+      "required": false,
+      "helperText": "Select the week for your course",
+      "validation": {
+        "message": "Please select a week"
+      }
+    },
+    {
+      "id": "preferred_time",
+      "type": "time",
+      "label": "Preferred Time (Time Input)",
+      "required": false,
+      "helperText": "Select your preferred time",
+      "validation": {
+        "message": "Please select a valid time"
+      }
+    },
+    {
+      "id": "hidden_field",
+      "type": "hidden",
+      "value": "some-hidden-value"
+    },
+    {
+      "id": "submit_button",
+      "type": "submit",
+      "label": "Submit Form (Type Submit)"
+    },
+    {
+      "id": "reset_button",
+      "type": "reset",
+      "label": "Reset Form (Type Reset)"
+    },
+    {
+      "id": "action_button",
+      "type": "button",
+      "label": "Click Me (Type Button)",
+      "onClick": "TODO"
+    },
+    {
+      "id": "profile_image",
+      "type": "image",
+      "label": "Profile Image Button",
+      "src": "https://img.icons8.com/?size=100&id=20750&format=png&color=000000",
+      "alt": "Profile Image"
+    }
+  ]
+}
