@@ -31,10 +31,10 @@
       "label": "Password (Password Input)",
       "required": false,
       "placeholder": "dhJi93$aP8",
-      "helperText": "Your password must be at least 8 characters long.",
+      "helperText": "Password must be at least 8 characters with letters and numbers.",
       "validation": {
-        "minLength": 8,
-        "message": "Your password must be at least 8 characters long."
+        "pattern": "^(?=.*[A-Za-z])(?=.*\\d)[A-Za-z\\d]{8,}$",
+        "message": "Password must be at least 8 characters with letters and numbers."
       }
     },
     {
