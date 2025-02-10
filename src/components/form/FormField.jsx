@@ -243,7 +243,7 @@ const FormField = ({ field, value, onChange}) => {
           <button
             id={field.id}
             type={field.type}
-            onClick={field.onClick}
+            // onClick={field.onClick} // TODO: future feature addition
             disabled={field.disabled}
             // from flowbite
             className={`text-white bg-blue-700 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none
@@ -262,7 +262,7 @@ const FormField = ({ field, value, onChange}) => {
             alt={field.alt}
             disabled={field.disabled}
             className={`cursor-pointer hover:opacity-80 transition-opacity ${field.disabled ? "opacity-75 cursor-not-allowed" : ""}`}
-            onClick={field.onClick}
+            // onClick={field.onClick} // TODO: future feature addition
           />
         );
 

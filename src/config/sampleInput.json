@@ -216,8 +216,7 @@
     {
       "id": "action_button",
       "type": "button",
-      "label": "Click Me (Type Button)",
-      "onClick": "TODO"
+      "label": "Click Me (Type Button)"
     },
     {
       "id": "profile_image",

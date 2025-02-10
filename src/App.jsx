@@ -1,13 +1,14 @@
 import React from "react";
 import './App.css'
 
-import { ThemeProvider } from "./context/ThemeContext";
+// import { ThemeProvider } from "./context/ThemeContext";
 import Header from "./components/Header";
 import FormSection from "./components/form/FormSection";
 
 function App() {
   return (
-    <ThemeProvider>
+    /* TODO: got issues with tailwindcss, postcss & vite with them - need more time to debug */
+    // <ThemeProvider>
       <div className="min-h-screen w-full flex flex-col">
         <Header />
         <main className="flex-1 w-full pt-16">
@@ -16,7 +17,7 @@ function App() {
           </div>
         </main>
       </div>
-    </ThemeProvider>
+    // </ThemeProvider>
   );
 }
 

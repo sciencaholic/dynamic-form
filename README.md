@@ -45,6 +45,7 @@ The following are all possible HTML input types & supported by this app (taken f
 - Country code dropdown with flag for `type="tel"` input with libs like `react-phone-number-input` or `react-international-phone`.
 - Support for `onClick` functions for `type=button`.
 - Data display on `Submit Form` (Currently, it logs the form data to console).
+- Dark/Light Theme Toggle - Got issues with TailwindCSS, PostCSS & Vite with theme - need more time to debug.
 
 ---
 

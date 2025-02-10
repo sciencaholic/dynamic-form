@@ -1,5 +1,5 @@
 import React from "react";
-import ThemeToggleButton from "./ThemeToggleButton";
+// import ThemeToggleButton from "./ThemeToggleButton";
 
 const Header = () => {
   return (
@@ -16,9 +16,10 @@ const Header = () => {
               Dynamic Form Generator
             </span>
           </span>
-          <div className="flex items-center">
+          {/* TODO: got issues with tailwindcss, postcss & vite with them - need more time to debug */}
+          {/* <div className="flex items-center">
             <ThemeToggleButton />
-          </div>
+          </div> */}
         </div>
       </nav>
     </header>
