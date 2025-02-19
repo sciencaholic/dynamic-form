@@ -2,15 +2,27 @@
   "title": "Sample Form Configuration File With All Possible Input Types",
   "fields": [
     {
-      "id": "name",
+      "id": "firstname",
       "type": "text",
-      "label": "Full Name (Text Input)",
+      "label": "First Name (Text Input)",
       "required": true,
-      "placeholder": "Pratiksha Sahu",
+      "placeholder": "Pratiksha",
       "validation": {
         "minLength": 3,
         "maxLength": 50,
         "message": "Name must be between 3 and 50 characters."
+      }
+    },
+    {
+      "id": "lastname",
+      "type": "text",
+      "label": "Last Name (Disabled Text Input)",
+      "disabled": true,
+      "placeholder": "Sahu",
+      "validation": {
+        "minLength": 2,
+        "maxLength": 50,
+        "message": "Name must be between 2 and 50 characters."
       }
     },
     {

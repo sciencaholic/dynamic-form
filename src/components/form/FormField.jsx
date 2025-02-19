@@ -94,32 +94,6 @@ const FormField = ({ field, value, onChange}) => {
           />
         );
 
-      case "color":
-        return (
-          <ColorInput
-            id={field.id}
-            required={field.required}
-            disabled={field.disabled}
-            value={localValue}
-            handleInputChange={handleInputChange}
-            handleBlur={handleBlur}
-          />
-        );
-
-      case "textarea":
-        return (
-          <TextareaInput
-            id={field.id}
-            required={field.required}
-            disabled={field.disabled}
-            placeholder={field.placeholder}
-            classes={baseInputClasses}
-            value={localValue}
-            handleInputChange={handleInputChange}
-            handleBlur={handleBlur}
-          />
-        );
-
       case "select":
         return (
           <SelectDropdownInput
@@ -155,6 +129,32 @@ const FormField = ({ field, value, onChange}) => {
             label={field.label}
             required={field.required}
             disabled={field.disabled}
+            value={localValue}
+            handleInputChange={handleInputChange}
+            handleBlur={handleBlur}
+          />
+        );
+
+      case "color":
+        return (
+          <ColorInput
+            id={field.id}
+            required={field.required}
+            disabled={field.disabled}
+            value={localValue}
+            handleInputChange={handleInputChange}
+            handleBlur={handleBlur}
+          />
+        );
+
+      case "textarea":
+        return (
+          <TextareaInput
+            id={field.id}
+            required={field.required}
+            disabled={field.disabled}
+            placeholder={field.placeholder}
+            classes={baseInputClasses}
             value={localValue}
             handleInputChange={handleInputChange}
             handleBlur={handleBlur}

@@ -3,12 +3,16 @@ import { render } from '@testing-library/react';
 import { FormProvider } from '../context/FormContext';
 import sampleInput from '../config/sampleInput.json';
 
-export const getFieldByType = (type) => {
-  return sampleInput.fields.find(field => field.type === type);
+export const getFieldById = (id) => {
+  const field = sampleInput.fields.find(field => field.id === id);
+  if (!field) {
+    throw new Error(`Field with id "${id}" not found in sample data`);
+  }
+  return field;
 };
 
-export const getAllFieldsByType = (type) => {
-  return sampleInput.fields.filter(field => field.type === type);
+export const getFieldByType = (type) => {
+  return sampleInput.fields.find(field => field.type === type);
 };
 
 export const makeField = (type, overrides = {}) => {
@@ -61,6 +65,7 @@ export const sampleFields = {
   color: makeField('color'),
   range: makeField('range'),
   hidden: makeField('hidden'),
+  textarea: makeField('textarea'),
 
   // Button inputs
   button: makeField('button'),
