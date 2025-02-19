@@ -72,5 +72,6 @@ And other types:
   `npm run dev`
   The app will be available at <http://localhost:5173>.
 
+Note: Use Node Version 22.12.0
 
 The app is hosted at https://dynamic-form-five-alpha.vercel.app/
