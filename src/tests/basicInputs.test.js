@@ -142,23 +142,6 @@ describe('Basic Input Field Tests', () => {
 		expect(props.onChange).toHaveBeenCalledWith('website', 'https://abc.com');
 	});
 
-	test('date input has correct format', () => {
-		const field = getFieldById('birthdate');
-		const props = {
-			field,
-			value: '1990-01-01',
-			onChange: jest.fn()
-		};
-
-		render(<FormField {...props} />);
-		
-		const dateInput = screen.getByLabelText(/Date of Birth/);
-		expect(dateInput).toHaveAttribute('type', 'date');
-		expect(dateInput).toHaveValue('1990-01-01');
-		fireEvent.change(dateInput, { target: { value: '2000-05-15' } });
-		expect(props.onChange).toHaveBeenCalledWith('birthdate', '2000-05-15');
-	});
-
 	test('search input has appropriate styling', () => {
 		const field = getFieldById('search_query');
 		const props = {
@@ -199,10 +182,7 @@ describe('Basic Input Field Tests', () => {
 	});
 
 	test('correctly detects field type and uses appropriate input element', () => {
-		const inputTypes = [
-			'text', 'email', 'password', 'number', 'url', 'tel', 
-			'date', 'time', 'datetime-local', 'month', 'week', 'search'
-		];
+		const inputTypes = [ 'text', 'email', 'password', 'number', 'url', 'tel', 'search' ];
 		
 		inputTypes.forEach(inputType => {
 			const field = getFieldByType(inputType);

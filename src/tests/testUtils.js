@@ -40,34 +40,35 @@ export const makeField = (type, overrides = {}) => {
 
 // form configs for different inputs
 export const sampleFields = {
-  // Text inputs
+  // Basic Inputs
   text: makeField('text'),
   email: makeField('email'),
   password: makeField('password'),
   url: makeField('url'),
+  number: makeField('number'),
   tel: makeField('tel'),
   search: makeField('search'),
 
-  // Date/Time inputs
+  // Date/Time Inputs
   date: makeField('date'),
   time: makeField('time'),
   dateTimeLocal: makeField('datetime-local'),
   month: makeField('month'),
   week: makeField('week'),
 
-  // Selection inputs
+  // Selection Inputs
   select: makeField('select'),
   radio: makeField('radio'),
   checkbox: makeField('checkbox'),
 
-  // Special inputs
+  // Special Inputs
   file: makeField('file'),
   color: makeField('color'),
   range: makeField('range'),
   hidden: makeField('hidden'),
   textarea: makeField('textarea'),
 
-  // Button inputs
+  // Button Inputs
   button: makeField('button'),
   submit: makeField('submit'),
   reset: makeField('reset'),

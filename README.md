@@ -72,6 +72,15 @@ And other types:
   `npm run dev`
   The app will be available at <http://localhost:5173>.
 
+4. **To run test**:
+  `npm test`
+  Unit tests are written for each set of input types - 
+      * Basic Inputs - `text`, `email`, `password`, `url`, `number`, `tel`, `search`
+      * Date/Time Inputs - `date`, `time`, `datetime-local`, `month`, `week`
+      * Selection Inputs - `select`, `radio`, `checkbox`
+      * Special Inputs - `file`, `color`, `range`, `hidden`, `textarea`
+      * Button Inputs - `button`, `submit`, `reset`, `image`
+
 Note: Use Node Version 22.12.0
 
 The app is hosted at https://dynamic-form-five-alpha.vercel.app/

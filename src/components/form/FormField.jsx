@@ -70,15 +70,15 @@ const FormField = ({ field, value, onChange}) => {
       case "text":
       case "email":
       case "password":
-      case "number":
       case "url":
+      case "number":
       case "tel":
+      case "search":
       case "date":
       case "time":
       case "datetime-local":
       case "month":
       case "week":
-      case "search":
         return (
           <BasicInput 
             id={field.id}
